@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">智宇日历温度</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_show_tmp">ShowTmpActivity</string>
+    <string name="title_activity_freamtest_">Freamtest_Activity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_framtest">FramtestActivity</string>
+    <string name="title_activity_frame">FrameActivity</string>
+
+</resources>

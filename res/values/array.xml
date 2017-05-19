@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="week_day">
+            <item>周一</item>
+            <item>周二</item>
+            <item>周三</item>
+            <item>周四</item>
+            <item>周五</item>
+            <item>周六</item>
+            <item>周日</item>
+          </string-array>
+          
+     <string-array name="big_month">
+        <item>初 一</item>
+        <item>初 二</item>
+        <item>初 三</item>
+        <item>初 四</item>
+        <item>初 五</item>
+        <item>初 六</item>
+        <item>初 七</item>
+        <item>初 八</item>
+        <item>初 九</item>
+        <item>初 十</item>
+        <item>十 一</item>
+        <item>十 二</item>
+        <item>十 三</item>
+        <item>十 四</item>
+        <item>十 五</item>
+        <item>十 六</item>
+        <item>十 七</item>
+        <item>十 八</item>
+        <item>十 九</item>
+        <item>廿 十</item>
+        <item>廿 一</item>
+        <item>廿 二</item>
+        <item>廿 三</item>
+        <item>廿 四</item>
+        <item>廿 五</item>
+        <item>廿 六</item>
+        <item>廿 七</item>
+        <item>廿 八</item>
+        <item>廿 九</item>
+        <item>三 十</item>
+        <item>春 节</item>  <!-- 30 -->
+        <item>立 春</item>  <!-- 31 -->
+        <item>元 宵</item>  <!--32 -->
+        <item>雨 水</item>  <!--  33-->
+        <item>惊 蛰</item>   <!--34  -->
+        <item>春 分</item>  <!-- 35 -->
+        <item>清 明</item>  <!-- 36 -->
+        <item>谷 雨</item>  <!-- 37 -->
+        <item>立 夏</item>  <!-- 38 -->
+        <item>小 满</item>  <!-- 39 -->
+        <item>端 午</item>  <!-- 40 -->
+        <item>芒 种</item>  <!-- 41 -->
+        <item>夏 至</item>  <!-- 42 -->
+        <item>小 暑</item>  <!-- 43 -->
+        <item>大 暑</item>  <!-- 44 -->
+        <item>立 秋</item>  <!-- 45 -->
+        <item>处 暑</item>  <!-- 46 -->
+        <item>白 露</item>  <!-- 47 -->
+        <item>秋 分</item>  <!-- 48 -->
+        <item>中 秋</item>  <!-- 49 -->
+        <item>寒 露</item>  <!-- 50 -->
+        <item>霜 降</item>  <!-- 51 -->
+        <item>重 阳</item>  <!-- 52 -->
+        <item>立 冬</item>  <!-- 53 -->
+        <item>小 雪</item>  <!-- 54 -->
+        <item>大 雪</item>  <!-- 55 -->
+        <item>冬 至</item>  <!-- 56 -->
+        <item>小 寒</item>  <!-- 57 -->
+        <item>大 寒</item>  <!-- 58 -->
+        <item>腊 八</item>  <!-- 59 -->
+        
+    </string-array>
+    
+</resources>
