@@ -91,7 +91,7 @@ public class FrameActivity extends Activity
 	 static  ImageView img_shiwaistatus;
 	 long tongbu_nei;
 	 long tongbu_wai;
-	 static boolean isdebug = true;
+	 static boolean isdebug = false;
 	 private static int BatteryN=0,BatteryV=0,BatteryT=0;
 	 private static DatagramSocket ds = null;  
 	 private InetSocketAddress inetSocketAddress = null;  
@@ -562,7 +562,7 @@ private void installapk()
 		{
 			InetAddress groupAddress;
 			groupAddress = InetAddress.getByName("127.0.0.1");
-			 Log.e(TAG, "UDP监听中");  
+			if (FrameActivity.isdebug) Log.e(TAG, "UDP监听中");  
 			ms = new MulticastSocket(10086);
 			
 			ms.joinGroup(groupAddress);
@@ -572,7 +572,7 @@ private void installapk()
                 e.printStackTrace();  
             }  
 		 dpRcv = new DatagramPacket(msgRcv, msgRcv.length);  
-         Log.e(TAG, "UDP服务器已经启动");  
+		 if (FrameActivity.isdebug) Log.e(TAG, "UDP服务器已经启动");  
          while (true) {  
              try {  
                 
@@ -580,7 +580,7 @@ private void installapk()
                   {ms.receive(dpRcv);  
    
                  String rcving = new String(dpRcv.getData(), dpRcv.getOffset(), dpRcv.getLength());  
-                 Log.e(TAG, "收到信息：" + rcving);  
+                 if (FrameActivity.isdebug) Log.e(TAG, "收到信息：" + rcving);  
                  int c = 0;
 				 if((c = rcving.indexOf('?'))>=0)
 				 {
@@ -595,7 +595,7 @@ private void installapk()
 					       shebei[i] =	tp_params[1];
 						   shuzhi[i] =   tp_params[1];
 						} 
-						  Log.e(TAG, shebei[i] + " " +shuzhi[i]);
+						if (FrameActivity.isdebug) Log.e(TAG, shebei[i] + " " +shuzhi[i]);
 						}
 						
 						runOnUiThread( new Runnable()
@@ -611,7 +611,7 @@ private void installapk()
 									 //   show_left.setBackgroundColor(0xff00ff00);
 									    img_shineistatus.setImageResource(android.R.drawable.presence_online);
 									    tongbu_nei = System.currentTimeMillis();
-									    Log.e(TAG, "1 OK");
+									    if (FrameActivity.isdebug) Log.e(TAG, "1 OK");
 								}
 								 else
 								 {	  TextView tv_showwai = (TextView)findViewById(R.id.rel_2_showtmp_wai);
@@ -753,7 +753,7 @@ private void installapk()
 		{
 		 while(true)
 		 { 
-			Log.e(TAG, "in loop"); 
+			 if (FrameActivity.isdebug) Log.e(TAG, "in loop"); 
 			
 			if (showtemp)
 			{
@@ -790,7 +790,7 @@ private void installapk()
 			  
 				public void run()
 				{
-					Log.e(TAG, "change face"); 
+					if (FrameActivity.isdebug) Log.e(TAG, "change face"); 
 					if (change_face)
 					{rel_showtime1.setVisibility(RelativeLayout.INVISIBLE);
 					rel_showtmp2.setVisibility(RelativeLayout.VISIBLE);}
@@ -840,7 +840,7 @@ private void installapk()
 				Socket msSocket = server.accept();
 				msSocket.setSoTimeout(2000);
 				msSocket.setSoLinger(true, 5);
-				Log.e(TAG, "new client");
+				if (FrameActivity.isdebug) Log.e(TAG, "new client");
 				client mclient = new client(msSocket);
 				mclient.start();
 			}
@@ -875,7 +875,7 @@ private void installapk()
 					 if (cb > 0)
 					 { byte readbyte[] = new byte[cb];
 						 fromclient.read(readbyte);
-						 Log.e(TAG,"收到数据长度为："+ readbyte.length);
+						 if (FrameActivity.isdebug)  Log.e(TAG,"收到数据长度为："+ readbyte.length);
 						 final String str = new String(readbyte);
 						 int c = 0;
 						 if((c = str.indexOf('?'))>=0)
@@ -891,7 +891,7 @@ private void installapk()
 							       shebei[i] =	tp_params[1];
 								   shuzhi[i] =   tp_params[1];
 								} 
-								  Log.e("tmp", shebei[i] + " " +shuzhi[i]);
+								if (FrameActivity.isdebug) Log.e("tmp", shebei[i] + " " +shuzhi[i]);
 								}
 								
 								runOnUiThread( new Runnable()
@@ -907,7 +907,7 @@ private void installapk()
 											 //   show_left.setBackgroundColor(0xff00ff00);
 											    img_shineistatus.setImageResource(android.R.drawable.presence_online);
 											    tongbu_nei = System.currentTimeMillis();
-											    Log.e(TAG, "1 OK");
+											    if (FrameActivity.isdebug)  Log.e(TAG, "1 OK");
 										}
 										 else
 										 {	  TextView tv_showwai = (TextView)findViewById(R.id.rel_2_showtmp_wai);
@@ -918,7 +918,7 @@ private void installapk()
 										 };
 									}
 								 });
-								 Log.e(TAG, str);
+								if (FrameActivity.isdebug) Log.e(TAG, str);
 							 }
 						 }
 						 
@@ -929,7 +929,7 @@ private void installapk()
 		       	}
 			} catch (IOException e)
 			{
-				Log.e(TAG, "连接关闭");
+				if (FrameActivity.isdebug) Log.e(TAG, "连接关闭");
 				e.printStackTrace();
 			} catch (InterruptedException e)
 			{
@@ -991,7 +991,7 @@ private void installapk()
 					showtemp = isChecked;
 					
 					
-					Log.e(TAG, ""+isChecked);
+					if (FrameActivity.isdebug) Log.e(TAG, ""+isChecked);
 				}
 			});
 			 
@@ -1018,7 +1018,7 @@ private void installapk()
 				@Override
 				public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser)
 				{
-					Log.e(TAG, ""+progress);
+					if (FrameActivity.isdebug) Log.e(TAG, ""+progress);
 					if (progress==0)
 					{
 						progress = 1;
