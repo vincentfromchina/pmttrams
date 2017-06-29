@@ -10,5 +10,5 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_framtest">FramtestActivity</string>
     <string name="title_activity_frame">FrameActivity</string>
-
+    <string name="url">http://dayuinf.com</string>
 </resources>

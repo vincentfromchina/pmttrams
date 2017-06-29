@@ -39,6 +39,12 @@
             </intent-filter>
         </activity>
         
+        <activity
+            android:name=".WebActivity"
+            android:label="好用软件"
+            android:screenOrientation="portrait" >
+        </activity>
+        
         <receiver android:name="com.dayu.smarttmp.FrameActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
